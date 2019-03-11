@@ -1,6 +1,5 @@
 package com.radek.haidresser.entity;
 
-import com.radek.haidresser.entity.AbstractEntity;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;

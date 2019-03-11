@@ -1,6 +1,5 @@
 package com.radek.haidresser;
 
-import com.radek.haidresser.entity.Appointment;
 import com.radek.haidresser.entity.Client;
 import com.radek.haidresser.repository.ClientRepository;
 import com.radek.haidresser.repository.EmployeeRepository;
