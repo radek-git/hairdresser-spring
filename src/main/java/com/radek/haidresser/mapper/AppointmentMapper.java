@@ -16,5 +16,5 @@ public interface AppointmentMapper {
     })
     AppointmentDTO toDTO(Appointment appointment);
 
-    //Appointment toEntity(AppointmentDTO appointmentDTO);
+    Appointment toEntity(AppointmentDTO appointmentDTO);
 }
