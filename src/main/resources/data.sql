@@ -1,3 +1,5 @@
+
+
 create table if not exists user_type(
   id integer(10) primary key auto_increment,
   name varchar(50) not null
@@ -14,4 +16,4 @@ insert into user (name, surname, username, user_type_id) values ( 'empname2', 'e
 insert into user (name, surname, username, user_type_id) values ( 'cname1', 'csurname1', 'cusername1', 2 );
 insert into user (name, surname, username, user_type_id) values ( 'cname2', 'csurname2', 'cusername2', 2 );
 
-insert into appointment ( client_id, employee_id, start_time, end_time, price ) values ( 1, 2, '2019-03-13T10:00:00', '2019-03-13T11:00:00', 30 );
+insert into appointment ( client_id, employee_id, start_time, end_time, price ) values ( 3, 1, '2019-03-13T10:00:00', '2019-03-13T11:00:00', 30 );

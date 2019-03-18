@@ -15,13 +15,13 @@ public class DemoApplication {
         SpringApplication.run(DemoApplication.class, args);
     }
 
-    @Bean
-    CommandLineRunner sql(ClientRepository cr, EmployeeRepository er) {
-        return args -> {
-            Client client = new Client("name1", "surname1", "username1");
-
-            cr.save(client);
-        };
-    }
+//    @Bean
+//    CommandLineRunner sql(ClientRepository cr, EmployeeRepository er) {
+//        return args -> {
+//            Client client = new Client("name1", "surname1", "username1");
+//
+//            cr.save(client);
+//        };
+//    }
 
 }

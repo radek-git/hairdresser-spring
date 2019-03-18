@@ -10,11 +10,11 @@ import java.util.List;
 @Data
 @Entity
 @NoArgsConstructor
-@DiscriminatorValue("1")
+@DiscriminatorValue("2")
 public class Client extends User {
 
-    public Client(String name, String surname, String username) {
-        super(name, surname, username);
+    public Client(String name, String surname, String username, String password) {
+        super(name, surname, username, password);
     }
 
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)

@@ -10,11 +10,11 @@ import java.util.List;
 @Data
 @Entity
 @NoArgsConstructor
-@DiscriminatorValue("2")
+@DiscriminatorValue("1")
 public class Employee extends User {
 
-    public Employee(String name, String surname, String username) {
-        super(name, surname, username);
+    public Employee(String name, String surname, String username, String password) {
+        super(name, surname, username, password);
     }
 
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)

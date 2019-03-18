@@ -13,6 +13,7 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 public class AppointmentDTO implements Serializable {
 
+    private Long id;
     private Long clientId;
     private Long employeeId;
 
