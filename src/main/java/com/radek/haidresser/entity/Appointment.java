@@ -4,11 +4,11 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.CascadeType;
-import javax.persistence.Entity;
-import javax.persistence.ManyToOne;
+import javax.persistence.*;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Data
@@ -25,6 +25,10 @@ public class Appointment extends AbstractEntity {
     private LocalDateTime startTime;
     private LocalDateTime endTime;
 
-    private BigDecimal price;
+    private BigDecimal totalPrice;
+
+    @OneToMany(mappedBy = "appointment", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+//    @JoinColumn(name = "id")
+    private List<AppointmentService> appointmentServices = new ArrayList<>();
 
 }

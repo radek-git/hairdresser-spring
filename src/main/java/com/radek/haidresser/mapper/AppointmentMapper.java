@@ -17,6 +17,10 @@ public interface AppointmentMapper {
     })
     AppointmentDTO toDTO(Appointment appointment);
 
+    @Mappings({
+            @Mapping(target = "client.id", source = "clientId"),
+            @Mapping(target = "employee.id", source = "employeeId")
+    })
     Appointment toEntity(AppointmentDTO appointmentDTO);
 
     List<AppointmentDTO> toDTOList(List<Appointment>appointments);
