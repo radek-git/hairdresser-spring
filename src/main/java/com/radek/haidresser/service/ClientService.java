@@ -3,10 +3,11 @@ package com.radek.haidresser.service;
 import com.radek.haidresser.dto.ClientDTO;
 import com.radek.haidresser.entity.Client;
 import com.radek.haidresser.repository.ClientRepository;
+import com.radek.haidresser.specification.ClientSpecification;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
-
-import java.util.List;
 
 @Service
 public class ClientService {
@@ -22,8 +23,8 @@ public class ClientService {
         return clientRepository.findById(id).orElseThrow(() -> new RuntimeException("Nie ma takiego użytkownika"));
     }
 
-    public List<Client> findAll() {
-        return clientRepository.findAll();
+    public Page<Client> findAll(ClientSpecification clientSpecification, Pageable pageable) {
+        return clientRepository.findAll(clientSpecification, pageable);
     }
 
     public Client findByName(String name) {
@@ -57,5 +58,10 @@ public class ClientService {
         clientRepository.save(client);
 
         return client;
+    }
+
+    public Client findByUsername(String username) {
+
+        return clientRepository.findByUsername(username).orElseThrow(() -> new RuntimeException("Nie ma użytkownika o podanej nazwie"));
     }
 }

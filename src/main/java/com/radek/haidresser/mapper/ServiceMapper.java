@@ -14,5 +14,4 @@ public interface ServiceMapper {
     List<ServiceDTO> toDTOList(List<Service> services);
 
 
-
 }

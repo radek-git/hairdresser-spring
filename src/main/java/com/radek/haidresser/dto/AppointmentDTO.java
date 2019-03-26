@@ -7,6 +7,8 @@ import lombok.NoArgsConstructor;
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.List;
 
 @Data
 @AllArgsConstructor
@@ -20,6 +22,9 @@ public class AppointmentDTO implements Serializable {
     private LocalDateTime startTime;
     private LocalDateTime endTime;
 
-    private BigDecimal price;
+    private BigDecimal totalPrice;
+
+    private List<Long> appointmentServices = new ArrayList<>();
+
 }
 

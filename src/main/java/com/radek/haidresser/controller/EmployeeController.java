@@ -34,7 +34,7 @@ public class EmployeeController {
     }
 
     @GetMapping("/all")
-    public List<EmployeeDTO> findAll () {
+    public List<EmployeeDTO> findAll() {
         return employeeMapper.toEmployeeDTOList(employeeService.findAll());
     }
 

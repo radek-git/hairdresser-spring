@@ -1,6 +1,7 @@
 package com.radek.haidresser.entity;
 
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -12,6 +13,7 @@ import java.util.List;
 
 @Entity
 @Data
+@Builder
 @NoArgsConstructor
 @AllArgsConstructor
 public class Appointment extends AbstractEntity {
@@ -28,7 +30,6 @@ public class Appointment extends AbstractEntity {
     private BigDecimal totalPrice;
 
     @OneToMany(mappedBy = "appointment", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-//    @JoinColumn(name = "id")
     private List<AppointmentService> appointmentServices = new ArrayList<>();
 
 }

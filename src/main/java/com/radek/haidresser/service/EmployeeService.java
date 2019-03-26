@@ -22,7 +22,7 @@ public class EmployeeService {
         return employeeRepository.findById(id).orElseThrow(() -> new RuntimeException("Nie ma pracownika o takim ID"));
     }
 
-    public List<Employee> findAll () {
+    public List<Employee> findAll() {
         return employeeRepository.findAll();
     }
 

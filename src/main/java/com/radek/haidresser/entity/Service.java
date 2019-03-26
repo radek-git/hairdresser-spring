@@ -11,7 +11,7 @@ import java.math.BigDecimal;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class Service extends AbstractEntity{
+public class Service extends AbstractEntity {
 
     private String name;
     private BigDecimal price;

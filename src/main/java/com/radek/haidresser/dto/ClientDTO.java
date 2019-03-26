@@ -16,6 +16,6 @@ public class ClientDTO implements Serializable {
     private String name;
     private String surname;
     private String username;
-//    private List<AppointmentDTO> appointments;
+    //private List<AppointmentDTO> appointments;
 
 }
