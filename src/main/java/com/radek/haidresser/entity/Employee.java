@@ -13,6 +13,7 @@ import java.util.List;
 @DiscriminatorValue("1")
 public class Employee extends User {
 
+
     public Employee(String name, String surname, String username, String password) {
         super(name, surname, username, password);
     }
